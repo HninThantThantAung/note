@@ -1,0 +1,31 @@
+.form-container {
+    max-width: 400px;
+    min-height: 600px;
+    margin: auto;
+    margin-top: 50px;
+    position: relative;
+}
+input {
+    border: none;
+    background-color: rgb(249, 243, 243);
+}
+input:hover{
+    background-color: rgb(249, 243, 243);
+}
+textarea {
+    width: 400px;
+    height: 100px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(249, 243, 243);
+}
+.cancel {
+    position: absolute;
+    margin-top: 29px;
+    margin-left: 220px;
+}
+.save {
+    position: absolute;
+    margin-top: 22px;
+    margin-left: 320px; 
+}

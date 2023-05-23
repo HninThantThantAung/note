@@ -1,0 +1,43 @@
+<div class="form-container">
+  <form [formGroup]="noteForm" (ngSubmit)="onSubmit()">
+    <label for="title" class="form-label">Title</label>
+
+    <input
+      type="text"
+      class="form-control"
+      id="title"
+      required
+      formControlName="title"
+    />
+
+    <br />
+    <label for="bodytext" class="form-label">Body</label>
+
+    <textarea
+      name="bodytext"
+      class="form-control"
+      id="bodytext"
+      formControlName="body"
+    ></textarea>
+
+    <div class="field is-grouped is-pulled-right">
+      <span class="control">
+        <button class="button btn btn-link cancel" type="reset">Cancel</button>
+      </span>
+      <span class="control">
+        <button
+          class="button btn btn-success save"
+          style="background-color: rgb(12, 176, 12); width: 80px"
+          type="submit"
+        >
+          Save
+        </button>
+      </span>
+    </div>
+  </form>
+
+  <div *ngIf="note">
+    <p>title: {{ note.title }}</p>
+    <p>body: {{ note.body }}</p>
+  </div>
+</div>

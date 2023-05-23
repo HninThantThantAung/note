@@ -1,0 +1,38 @@
+<div class="main-container">
+    <div class="search-bar-container">
+        <div class="field">
+            <p class="control has-icons-left">
+                <input class="input" type="text"  placeholder="search">
+                <span class="icon is-small is-left">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </span>
+            </p>
+        </div>
+    </div>
+    <div  *ngFor="let item of noteCard; index as i">
+        <div class="note-card-container">
+            <div class="note-card-content">
+                <h1 class="note-card-title ">{{item.title}}</h1>
+                <div class="note-card-body">
+                    <span class="para" *ngIf="item.body.length <= wordLimit">
+                        <p>{{item.body}}</p>
+                    </span>
+                    <span class="para" *ngIf = "item.body.length > wordLimit && !showMore">
+                        <p>{{item.body.substring(0, wordLimit)}}... <span (click)="showMore = true"><b>show more</b></span></p>
+                    </span>
+                    <span class="para" *ngIf = "item.body.length > wordLimit && showMore">
+                        <p>{{item.body}}...<span (click)="showMore = false"><b>show less</b></span></p>
+                    </span>
+                </div>
+            </div>
+            <div class="trash" (click)="delete(item, i)">
+                <h6>x</h6>
+            </div>
+        </div>
+        <br>
+    </div>
+
+    <!-- <div class="btn"> -->
+        <button type="button" class="btn btn-dark" (click)="addNote()">+ Add</button>
+    <!-- </div> -->
+</div>
