@@ -1,13 +1,16 @@
 .form-container {
     max-width: 400px;
-    min-height: 600px;
+    min-height: 400px;
     margin: auto;
     margin-top: 50px;
     position: relative;
+    padding: 15px;
+    background-color: #e0e8e7;
 }
 input {
     border: none;
     background-color: rgb(249, 243, 243);
+    width: 400px;
 }
 input:hover{
     background-color: rgb(249, 243, 243);
@@ -28,4 +31,11 @@ textarea {
     position: absolute;
     margin-top: 22px;
     margin-left: 320px; 
+}
+.write_form {
+    background-color: #e0e8e7;
+    width: 500px;
+    height: 400px;
+    margin: auto;
+    border-radius: 5px;
 }

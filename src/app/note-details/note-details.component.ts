@@ -12,11 +12,15 @@ import { AllinOneService } from '../allin-one.service';
 export class NoteDetailsComponent {
   constructor(private router: Router, private allinOne: AllinOneService){}
 
-  noteForm = new FormGroup({
-    title : new FormControl(''),
-    body : new FormControl('')
-  });
+  // noteForm = new FormGroup({
+  //   title : new FormControl(''),
+  //   body : new FormControl('')
+  // });
 
+  noteForm = new FormGroup({
+    title: new FormControl(''),
+    body: new FormControl('')
+  })
   note: any;
 
     onSubmit(){
